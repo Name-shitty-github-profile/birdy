@@ -31,13 +31,6 @@ def main():
 
     if arg1 == 'help':
         help()
-
-    elif arg1 == 'search':
-        query = arg2
-        if query == None:
-            help()
-        else:
-            search(query)
     
     elif arg1 == 'publish':
         packagename = arg2
@@ -49,9 +42,13 @@ def main():
         package = arg1
         if arg2 == '-y':
             install(package)
+        elif arg2 == '-n':
+            search(package)
         else:
             response = input(f"Do you want to install {package}? (y/n): ")
             if response.lower() == 'y':
                 install(package)
+            if response.lower() == 'n':
+                search(query)
 if __name__ == "__main__":
     main()
