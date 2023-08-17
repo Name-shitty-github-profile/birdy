@@ -4,22 +4,17 @@ The package manager for SwiftOS.
 
 ## Command syntax
 
-**Help**
-```shell
+### Help
+```
 birdy help
 ```
 
-**Install**
-```shell
-birdy <package>
+### Install/search
+```
+birdy <package/query>
 ```
 
-**Search**
-```shell
-birdy search <query/package>
+### Publish
 ```
-
-**Publish**
-```shell
 birdy publish <packageName>
 ```
